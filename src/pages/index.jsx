@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import tw from 'tailwind.macro'
 import { Parallax } from 'react-spring/renderprops-addons.cjs'
+import Typist from 'react-typist'
 
 // Components
 import Layout from '../components/Layout'
@@ -63,9 +64,16 @@ const Index = () => (
     <Parallax pages={5}>
       <Hero offset={0}>
         <BigTitle>
-          Hello, <br /> I'm John Doe.
+          <Typist avgTypingSpeed={50} startDelay={700} cursor={{ blink: true }}>
+            Hey, <br/>
+            we are nucleos
+          </Typist>
         </BigTitle>
-        <Subtitle>I'm creating noice web experiences for the next generation of consumer-facing companies.</Subtitle>
+        <Subtitle>
+          <Typist avgTypingSpeed={40} startDelay={2500} cursor={{ show: false }}>
+            We can help you with your ideas.
+          </Typist>
+        </Subtitle>
       </Hero>
       <Projects offset={1}>
         <Title>Projects</Title>
